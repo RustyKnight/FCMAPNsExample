@@ -276,6 +276,7 @@
 				70DB6A9E21A4F39E00366167 /* Sources */,
 				70DB6A9F21A4F39E00366167 /* Frameworks */,
 				70DB6AA021A4F39E00366167 /* Resources */,
+				705B61AF21A5792E00B6E9EC /* Carthage */,
 				70DB6AE421A4FB6E00366167 /* Embed Frameworks */,
 			);
 			buildRules = (
@@ -341,6 +342,33 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		705B61AF21A5792E00B6E9EC /* Carthage */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/FlowKit.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Hermes.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Hydra.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/LogWrapperKit.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Realm.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RealmSwift.framework",
+			);
+			name = Carthage;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		70DB6A9E21A4F39E00366167 /* Sources */ = {
@@ -507,6 +535,7 @@
 				CODE_SIGN_ENTITLEMENTS = FCMAPNExample/FCMAPNExample.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = YWXH886EY3;
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
@@ -535,6 +564,7 @@
 				CODE_SIGN_ENTITLEMENTS = FCMAPNExample/FCMAPNExample.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = YWXH886EY3;
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
