@@ -1,0 +1,10 @@
+git "https://github.com/RustyKnight/Hermes.git"
+git "https://github.com/RustyKnight/LogWrapperKit.git"
+git "https://github.com/malcommac/FlowKit"
+
+#git "https://github.com/realm/realm-cocoa.git" ~> 3.11.2
+
+binary "https://kaizen.api.net:8443/json/10.1b10B61/realm-cocoa" ~> 3.11.1
+
+binary "https://dl.google.com/dl/firebase/ios/carthage/FirebaseMessagingBinary.json"
+binary "https://dl.google.com/dl/firebase/ios/carthage/FirebaseAnalyticsBinary.json"
