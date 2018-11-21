@@ -82,3 +82,4 @@ fastlane/builds
 *.cer
 *.zip
 /AuthKey_X7J4NNL2GB.p8
+/APNsAuthenticationKey.txt
