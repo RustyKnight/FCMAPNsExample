@@ -36,7 +36,9 @@ class SettingsTableViewController: UITableViewController {
           log(error: error)
           self.presentOkAlert(title: "Error", message: "Could not find FCM client key")
         } else if let result = result {
-          self.presentOkAlert(title: "FCM", message: "\(result.token)")
+          self.present(token: result.token)
+        } else {
+          self.presentOkAlert(title: "Error", message: "Could not find FCM client key")
         }
       }
     }
@@ -58,5 +60,40 @@ class SettingsTableViewController: UITableViewController {
       log(error: error)
       self.presentOkAlert(title: "Error", message: "Could remove existing messages")
     }
+  }
+  
+  func present(token: String) {
+    let okAction = UIAlertAction.ok()
+//    let copyAction = UIAlertAction(title: "Copy", style: .default) { (action) in
+//      UIPasteboard.general.string
+//    }
+    let shareAction = UIAlertAction(title: "Share", style: .default) { (action) in
+      let controller = UIActivityViewController(activityItems: [token], applicationActivities: nil)
+      controller.popoverPresentationController?.sourceView = self.view // so that iPads won't crash
+      
+      // exclude some activity types from the list (optional)
+      controller.excludedActivityTypes = [
+        UIActivity.ActivityType.postToVimeo,
+        UIActivity.ActivityType.postToWeibo,
+        UIActivity.ActivityType.postToFlickr,
+        UIActivity.ActivityType.postToTwitter,
+        UIActivity.ActivityType.postToFacebook,
+        UIActivity.ActivityType.postToTencentWeibo,
+        UIActivity.ActivityType.saveToCameraRoll,
+        UIActivity.ActivityType.addToReadingList,
+        UIActivity.ActivityType.markupAsPDF,
+        UIActivity.ActivityType.openInIBooks,
+      ]
+      
+      // present the view controller
+      self.present(controller, animated: true, completion: nil)
+    }
+    
+    self.presentAlert(title: "FCM",
+                      message: token,
+                      actions: [
+                        okAction,
+//                        copyAction,
+                        shareAction])
   }
 }
