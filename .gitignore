@@ -83,3 +83,5 @@ fastlane/builds
 *.zip
 /AuthKey_X7J4NNL2GB.p8
 /APNsAuthenticationKey.txt
+
+Certificates

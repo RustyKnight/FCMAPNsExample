@@ -11,7 +11,7 @@ import UIKit
 import UserNotifications
 import Hermes
 import Hydra
-import LogWrapperKit
+import Cadmus
 import RealmSwift
 
 /*

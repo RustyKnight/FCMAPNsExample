@@ -8,7 +8,7 @@
 
 import Foundation
 import Firebase
-import LogWrapperKit
+import Cadmus
 
 /*
  Google messaging based functionality

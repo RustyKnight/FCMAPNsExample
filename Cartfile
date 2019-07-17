@@ -1,10 +1,9 @@
-git "https://github.com/RustyKnight/Hermes.git"
-git "https://github.com/RustyKnight/LogWrapperKit.git"
-git "https://github.com/malcommac/FlowKit"
 
-#git "https://github.com/realm/realm-cocoa.git" ~> 3.11.2
-
-binary "https://kaizen.api.net:8443/json/10.1b10B61/realm-cocoa" ~> 3.11.1
+binary "https://www.kiazenenterprises.org:8443/json/10.2.1b10E1001/Cadmus" ~> 1.0.6
+binary "https://www.kiazenenterprises.org:8443/json/10.2.1b10E1001/realm-cocoa" ~> 3.13.1
+binary "https://www.kiazenenterprises.org:8443/json/10.2.1b10E1001/Hermes" ~> 1.0.5
+binary "https://www.kiazenenterprises.org:8443/json/10.2.1b10E1001/FlowKit" ~> 0.6.9
+binary "https://www.kiazenenterprises.org:8443/json/10.2.1b10E1001/Hydra" ~> 1.2.1
 
 binary "https://dl.google.com/dl/firebase/ios/carthage/FirebaseMessagingBinary.json"
 binary "https://dl.google.com/dl/firebase/ios/carthage/FirebaseAnalyticsBinary.json"

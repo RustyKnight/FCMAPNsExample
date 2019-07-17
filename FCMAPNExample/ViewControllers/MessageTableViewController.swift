@@ -9,7 +9,7 @@
 import UIKit
 import FlowKit
 import RealmSwift
-import LogWrapperKit
+import Cadmus
 
 // List of messages
 class MessageTableViewController: UITableViewController {

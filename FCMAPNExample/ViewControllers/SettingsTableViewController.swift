@@ -8,7 +8,7 @@
 
 import UIKit
 import Firebase
-import LogWrapperKit
+import Cadmus
 import RealmSwift
 
 /*
